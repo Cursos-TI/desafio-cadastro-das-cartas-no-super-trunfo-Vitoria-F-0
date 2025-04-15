@@ -11,7 +11,7 @@ int main() {
 
     char estado1, estado2; //Armazena o caractere que representa o estado.
     char codigo1[4], codigo2[4]; //Armazena a string de três digitos que representa o estado.
-    char nome1[20], nome2[20]; //Armazena a string de até 19 caracteres da cidade correspondente ao estado.
+    char nome1[20], nome2[20]; //Armazena a string de até 19 caracteres da cidade correspondente ao estado (não permite espaço no nome).
     int populacao1, populacao2, pontosturisticos1, pontosturisticos2; //Armazena o total populacional/ de pontos turísticos da cidade.
     float area1, area2, pib1, pib2; //Armazena o tamanho da área(km²)/ o valor do Produto Interno Bruto regional.
     float densidadepopulacional1, densidadepopulacional2, pibpercapta1, pibpercapta2; //Armazena a densidade populacional (hab/km²) e o PIB per capta (reais).
@@ -43,7 +43,7 @@ int main() {
 
     //Cálculos
     
-    densidadepopulacional1 = populacao1 / area1; //Seleciona a quantidade inserida pelo usuário nas variáveis populacional1 e area1 e divide esse valor para achar a densidade polacional.
+    densidadepopulacional1 = populacao1 / area1; //Seleciona a quantidade inserida pelo usuário nas variáveis populacional1 e area1 e divide esse valor para achar a densidade populacional.
 
     pibpercapta1 = pib1 * 1000000000 / populacao1; //Seleciona a quantidade inserida pelo usuário nas variáveis pibl1 (convertendo bilhões em reais) e populacao1 e divide esse valor para achar o pib per capta.
 
