@@ -27,10 +27,10 @@ int main() {
     scanf("%c", &estado1); //Armazena a letra digitada pelo usuário (A até H).
 
     printf("Digite o código da carta(A01 - A04 até H01 - H04): \n"); //Solicita que o usuário digite o código de três que divide os estados (A01 - A04 até H01 - H04).
-    scanf("%s", &codigo1); //Armazena o código digitado pelo usuário (A01 - A04 até H01 - H04).
+    scanf("%s", codigo1); //Armazena o código digitado pelo usuário (A01 - A04 até H01 - H04).
 
     printf("Digite o nome da cidade(somente um nome): \n"); //Solicita que usuário que digite o nome da cidade correspondente ao estado.
-    scanf("%s", &nome1); //Armazena o nome da cidade digitado pelo usuário.
+    scanf("%s", nome1); //Armazena o nome da cidade digitado pelo usuário.
 
     printf("Digite o número populacional: \n"); // Solicita que o usuário digite a quantidade de habitantes da cidade escolhida.
     scanf("%lu", &populacao1); //Armazena o número populacional da cidade escolhida.
@@ -48,7 +48,7 @@ int main() {
     
     densidadePopulacional1 = populacao1 / area1; //Seleciona a quantidade inserida pelo usuário nas variáveis populacional1 e area1 e divide esse valor para achar a densidade populacional.
 
-    pibperCapita1 = (pib1 * 1000000000) / populacao1; //Seleciona a quantidade inserida pelo usuário nas variáveis pibl1 (com * 1000000000 para converter bilhões em reais) e populacao1 e divide esse valor para achar o pib per capita.
+    pibperCapita1 = (pib1 * 1000000000) / populacao1; //Seleciona a quantidade inserida pelo usuário nas variáveis pibl1 (com * 1000000000 para que divisão fique bilhões por reais) e populacao1 e divide esse valor para achar o pib per capita.
 
     superPoder1 = (float)populacao1 + area1 + pib1 + (float)pontosTuristicos1 + pibperCapita1 + (1.0 / densidadePopulacional1); //Soma as variáveis, alternado int para que todas estejam em float e invertendo o valor da densidadePopulacional.
     printf("Super Poder da carta 1: %f \n", superPoder1); //Imprime a soma das variáveis número populacional, área, PIB, pontos turísticos, inverso da densidade populacional e PIB per Capita.
@@ -69,10 +69,10 @@ int main() {
     scanf(" %c", &estado2);
 
     printf("Digite o código da carta(A01 - A04 até H01 - H04): \n");
-    scanf("%s", &codigo2);
+    scanf("%s", codigo2);
 
     printf("Digite o nome da cidade(somente um nome): \n");
-    scanf("%s", &nome2);
+    scanf("%s", nome2);
 
     printf("Digite o número populacional: \n");
     scanf("%lu", &populacao2);
