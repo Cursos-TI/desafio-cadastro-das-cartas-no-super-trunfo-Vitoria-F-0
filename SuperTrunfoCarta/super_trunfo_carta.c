@@ -130,4 +130,4 @@ int main() {
     printf(" - Super Poder: Carta %d venceu (%d)\n",1 + (resultado == 0), resultado);
 
 return 0; //O programa terminou com sucesso.
-}
+} 
