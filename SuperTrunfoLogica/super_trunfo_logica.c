@@ -164,73 +164,80 @@ int main() {
 
     switch (opcaoMenu) {
         case 1:
-            printf("\nPopulação:\n - %s: %lu\n - %s: %lu\n", nome1, populacao1, nome2, populacao2);
-            if (populacao1 > populacao2)
+            printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - populção\n", nome1, populacao1, nome2, populacao2);
+            if (populacao1 > populacao2){
                 printf("Resultado: Carta 1 venceu!\n", nome1);
-            else if (populacao2 > populacao1)
+            }else if (populacao2 > populacao1){
                 printf("Resultado: Carta 2 venceu!\n", nome2);
-            else
+            }else{
                 printf("Houve um empate!\n");
+            }    
             break;
 
         case 2:
-            printf("\nÁrea:\n - %s: %.2f km²\n - %s: %.2f km²\n", nome1, area1, nome2, area2);
-            if (area1 > area2)
+            printf("\nÁrea:\n - %s: %.2f km² - área\n - %s: %.2f km² - área\n", nome1, area1, nome2, area2);
+            if (area1 > area2){
                 printf("Resultado: Carta 1 venceu!\n", nome1);
-            else if (area2 > area1)
+            }else if (area2 > area1){
                 printf("Resultado: Carta 2 venceu!\n", nome2);
-            else
+            }else{
                 printf("Houve um empate!\n");
+            }    
             break;
 
         case 3:
-            printf("\nPIB:\n - %s: %.2f bilhões\n - %s: %.2f bilhões\n", nome1, pib1, nome2, pib2);
-            if (pib1 > pib2)
+            printf("\nPIB:\n - %s: %.2f bilhões - PIB\n - %s: %.2f bilhões - PIB\n", nome1, pib1, nome2, pib2);
+            if (pib1 > pib2){
                 printf("Resultado: Carta 1 venceu!\n", nome1);
-            else if (pib2 > pib1)
+            }else if (pib2 > pib1){
                 printf("Resultado: Carta 2 venceu!\n", nome2);
-            else
+            }else{
                 printf("Houve um empate!\n");
+            }    
             break;
 
         case 4:
-            printf("\nPontos Turísticos:\n - %s: %d\n - %s: %d\n", nome1, pontosTuristicos1, nome2, pontosTuristicos2);
-            if (pontosTuristicos1 > pontosTuristicos2)
+            printf("\nPontos Turísticos:\n - %s: %d - pontos turísticos\n - %s: %d - pontos turísticos\n", nome1, pontosTuristicos1, nome2, pontosTuristicos2);
+            if (pontosTuristicos1 > pontosTuristicos2){
                 printf("Resultado: Carta 1 venceu!\n", nome1);
-            else if (pontosTuristicos2 > pontosTuristicos1)
+            }else if (pontosTuristicos2 > pontosTuristicos1){
                 printf("Resultado: Carta 2 venceu!\n", nome2);
-            else
+            }else{
                 printf("Houve um empate!\n");
+            }    
             break;
 
         case 5:
-            printf("\nDensidade Populacional:\n - %s: %.2f hab/km²\n - %s: %.2f hab/km²\n", nome1, densidadePopulacional1, nome2, densidadePopulacional2);
-            if (densidadePopulacional1 < densidadePopulacional2)
+            printf("\nDensidade Populacional:\n - %s: %.2f hab/km² - densidade populacional\n - %s: %.2f hab/km² - densidade populacional\n", nome1, densidadePopulacional1, nome2, densidadePopulacional2);
+            if (densidadePopulacional1 < densidadePopulacional2){
                 printf("Resultado: Carta 1 venceu! \n", nome1);
-            else if (densidadePopulacional2 < densidadePopulacional1)
+            }else if (densidadePopulacional2 < densidadePopulacional1){
                 printf("Resultado: Carta 2 venceu! \n", nome2);
-            else
+            }else{
                 printf("Houve um empate!\n");
+            }    
             break;
 
         case 6:
-            printf("\nPIB per Capita:\n - %s: %.2f reais\n - %s: %.2f reais\n", nome1, pibperCapita1, nome2, pibperCapita2);
-            if (pibperCapita1 > pibperCapita2)
+            printf("\nPIB per Capita:\n - %s: %.2f reais - PIB per capita\n - %s: %.2f reais - PIB per capita\n", nome1, pibperCapita1, nome2, pibperCapita2);
+            if (pibperCapita1 > pibperCapita2){
                 printf("Resultado: Carta 1 venceu!\n", nome1);
-            else if (pibperCapita2 > pibperCapita1)
+            }else if (pibperCapita2 > pibperCapita1){
                 printf("Resultado: Carta 2 venceu!\n", nome2);
-            else
+            }else{
                 printf("Houve um empate!\n");
+            }    
             break;
 
         case 7:
-            printf("\nSuper Poder:\n - %s: %.2f\n - %s: %.2f\n", nome1, superPoder1, nome2, superPoder2);
-            if (superPoder1 > superPoder2)
+            printf("\nSuper Poder:\n - %s: %.2f - super poder\n - %s: %.2f - super poder\n", nome1, superPoder1, nome2, superPoder2);
+            if (superPoder1 > superPoder2){
                 printf("Resultado: Carta 1 venceu!\n", nome1);
-            else if (superPoder2 > superPoder1)
+            }else if (superPoder2 > superPoder1){
                 printf("Resultado: Carta 2 venceu!\n", nome2);
-            else
+            }else{
                 printf("Houve um empate!\n");
+            }    
             break;
 
         default:
