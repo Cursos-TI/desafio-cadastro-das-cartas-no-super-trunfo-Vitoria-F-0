@@ -244,5 +244,144 @@ int main() {
             printf("Opção inválida! Tente novamente.\n");
     }
 
+    //Menu de comparação entre múltiplos atributos
+
+    int resultado1;
+    int primeiroAtributo;
+    printf("\nMenu de Comparação de múltiplos atributos! \n");
+    printf("Escolha o primeiro atributo:\n");
+    printf("A. População\n");
+    printf("B. Pontos Turísticos\n");
+    printf("C. Área\n");
+    printf("D. PIB\n");
+    printf("E. Densidade Populacional\n");
+    printf("F. PIB per Capita\n");
+    printf("G. Super Poder");
+
+    printf("Escolha a comparação: ");
+    scanf(" %c, &primeiroAtributo");
+
+    switch (primeiroAtributo) {
+        case 'A':
+        case 'a':
+            printf("Você escolheu a opção População!\n");
+            resultado1 = populacao1 > populacao2 ? 1 : 0 ;
+            break;
+
+            case 'B':
+        case 'b':
+            printf("Você escolheu a opção Pontos Turísticos!\n");
+            resultado1 = pontosTuristicos1 > pontosTuristicos2 ? 1 : 0 ;
+            break;
+
+            case 'C':
+        case 'c':
+            printf("Você escolheu a opção Área!\n");
+            resultado1 = area1 > area2 ? 1 : 0 ;
+            break;
+
+            case 'D':
+        case 'd':
+            printf("Você escolheu a opção PIB!\n");
+            resultado1 = pib1 > pib2 ? 1 : 0 ;
+            break;
+
+            case 'E':
+        case 'e':
+            printf("Você escolheu a opção Densidade Populacional!\n");
+            resultado1 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0 ;
+            break;
+
+            case 'F':
+        case 'f':
+            printf("Você escolheu a opção PIB per Capita!\n");
+            resultado1 = pibperCapita1 > pibperCapita2 ? 1 : 0 ;
+            break;
+
+            case 'G':
+        case 'g':
+            printf("Você escolheu a opção Super Poder!\n");
+            resultado1 = superPoder1 > superPoder2 ? 1 : 0 ;
+            break;
+
+        default:
+            printf("Opção inválida! Tente novamente.\n");
+    }
+
+    int resultado2;
+    int segundoAtributo;
+    printf("\nMenu de Comparação de múltiplos atributos! \n");
+    printf("Escolha o segundo atributo:\n");
+    printf("A. População\n");
+    printf("B. Pontos Turísticos\n");
+    printf("C. Área\n");
+    printf("D. PIB\n");
+    printf("E. Densidade Populacional\n");
+    printf("F. PIB per Capita\n");
+    printf("G. Super Poder");
+
+    printf("Escolha a comparação: ");
+    scanf(" %c, &segundoAtributo");
+
+    if(" primeiroAtributo == segundoAtributo")
+    {
+        printf("Você escolheu o mesmo atributo!");
+    } else {
+        switch (segundoAtributo) {
+        case 'A':
+        case 'a':
+            printf("Você escolheu a opção População!\n");
+            resultado2 = populacao1 > populacao2 ? 1 : 0 ;
+            break;
+
+            case 'B':
+        case 'b':
+            printf("Você escolheu a opção Pontos Turísticos!\n");
+            resultado2 = pontosTuristicos1 > pontosTuristicos2 ? 1 : 0 ;
+            break;
+
+            case 'C':
+        case 'c':
+            printf("Você escolheu a opção Área!\n");
+            resultado2 = area1 > area2 ? 1 : 0 ;
+            break;
+
+            case 'D':
+        case 'd':
+            printf("Você escolheu a opção PIB!\n");
+            resultado2 = pib1 > pib2 ? 1 : 0 ;
+            break;
+
+            case 'E':
+        case 'e':
+            printf("Você escolheu a opção Densidade Populacional!\n");
+            resultado2 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0 ;
+            break;
+
+            case 'F':
+        case 'f':
+            printf("Você escolheu a opção PIB per Capita!\n");
+            resultado2 = pibperCapita1 > pibperCapita2 ? 1 : 0 ;
+            break;
+
+            case 'G':
+        case 'g':
+            printf("Você escolheu a opção Super Poder!\n");
+            resultado2 = superPoder1 > superPoder2 ? 1 : 0 ;
+            break;
+
+        default:
+            printf("Opção inválida! Tente novamente.\n");
+    }
+
+    if(resultado1 && resultado2) // 1 e 1 = venceu.
+    {
+        printf("Parabéns! Você venceu!\n");
+
+    } else if(resultado1 != resultado2){      //1 e 0/ 0 e 1 = empatou.
+        printf("Empatou!\n");
+    } else {                                  //0 e 0 = perdeu.
+        prinf("Infelizmente, você perdeu!\n");
+    }
 return 0; //O programa terminou com sucesso.
 }
