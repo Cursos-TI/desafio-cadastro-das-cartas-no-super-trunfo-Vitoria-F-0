@@ -327,8 +327,8 @@ int main() {
     printf("F - PIB per Capita\n");
     printf("G - Super Poder");
 
-    printf("\nEscolha a comparação: \n ");
-    printf("Atenção! Escolha um atributo diferente do primeiro.");
+    printf("\nEscolha a comparação: ");
+    printf("\nAtenção! Escolha um atributo diferente do primeiro.\n");
     scanf(" %c", &segundoAtributo);
 
     if(primeiroAtributo == segundoAtributo)
