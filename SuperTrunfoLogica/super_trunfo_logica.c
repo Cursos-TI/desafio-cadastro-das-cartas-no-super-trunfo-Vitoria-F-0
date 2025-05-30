@@ -259,7 +259,7 @@ int main() {
     printf("G. Super Poder");
 
     printf("Escolha a comparação: ");
-    scanf(" %c, &primeiroAtributo");
+    scanf(" %c", &primeiroAtributo);
 
     switch (primeiroAtributo) {
         case 'A':
@@ -321,9 +321,9 @@ int main() {
     printf("G. Super Poder");
 
     printf("Escolha a comparação: ");
-    scanf(" %c, &segundoAtributo");
+    scanf(" %c", &segundoAtributo);
 
-    if(" primeiroAtributo == segundoAtributo")
+    if(primeiroAtributo == segundoAtributo)
     {
         printf("Você escolheu o mesmo atributo!");
     } else {
@@ -381,7 +381,7 @@ int main() {
     } else if(resultado1 != resultado2){      //1 e 0/ 0 e 1 = empatou.
         printf("Empatou!\n");
     } else {                                  //0 e 0 = perdeu.
-        prinf("Infelizmente, você perdeu!\n");
+        printf("Infelizmente, você perdeu!\n");
     }
 return 0; //O programa terminou com sucesso.
 }
