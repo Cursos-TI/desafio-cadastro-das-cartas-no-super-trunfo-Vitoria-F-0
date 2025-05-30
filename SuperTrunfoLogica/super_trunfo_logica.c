@@ -210,9 +210,9 @@ int main() {
         case 5:
             printf("\nDensidade Populacional:\n - %s: %.2f hab/km² - densidade populacional\n - %s: %.2f hab/km² - densidade populacional\n", nome1, densidadePopulacional1, nome2, densidadePopulacional2);
             if (densidadePopulacional1 < densidadePopulacional2){
-                printf("Resultado: Carta 1 venceu! \n", nome1);
+                printf("Resultado: Carta 1 venceu!\n", nome1);
             }else if (densidadePopulacional2 < densidadePopulacional1){
-                printf("Resultado: Carta 2 venceu! \n", nome2);
+                printf("Resultado: Carta 2 venceu!\n", nome2);
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -248,15 +248,15 @@ int main() {
 
     int resultado1;
     int primeiroAtributo;
-    printf("\nMenu de Comparação de múltiplos atributos! \n");
+    printf("\nMenu de Comparação de múltiplos atributos \n");
     printf("Escolha o primeiro atributo:\n");
-    printf("A. População\n");
-    printf("B. Pontos Turísticos\n");
-    printf("C. Área\n");
-    printf("D. PIB\n");
-    printf("E. Densidade Populacional\n");
-    printf("F. PIB per Capita\n");
-    printf("G. Super Poder");
+    printf("A - População\n");
+    printf("B - Pontos Turísticos\n");
+    printf("C - Área\n");
+    printf("D - PIB\n");
+    printf("E - Densidade Populacional\n");
+    printf("F - PIB per Capita\n");
+    printf("G - Super Poder\n");
 
     printf("Escolha a comparação: ");
     scanf(" %c", &primeiroAtributo);
@@ -266,42 +266,49 @@ int main() {
         case 'a':
             printf("Você escolheu a opção População!\n");
             resultado1 = populacao1 > populacao2 ? 1 : 0 ;
+            printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - populção\n", nome1, populacao1, nome2, populacao2);
             break;
 
             case 'B':
         case 'b':
             printf("Você escolheu a opção Pontos Turísticos!\n");
             resultado1 = pontosTuristicos1 > pontosTuristicos2 ? 1 : 0 ;
+            printf("\nPontos Turísticos:\n - %s: %d - pontos turísticos\n - %s: %d - pontos turísticos\n", nome1, pontosTuristicos1, nome2, pontosTuristicos2);
             break;
 
             case 'C':
         case 'c':
             printf("Você escolheu a opção Área!\n");
             resultado1 = area1 > area2 ? 1 : 0 ;
+            printf("\nÁrea:\n - %s: %.2f km² - área\n - %s: %.2f km² - área\n", nome1, area1, nome2, area2);
             break;
 
             case 'D':
         case 'd':
             printf("Você escolheu a opção PIB!\n");
             resultado1 = pib1 > pib2 ? 1 : 0 ;
+            printf("\nPIB:\n - %s: %.2f bilhões - PIB\n - %s: %.2f bilhões - PIB\n", nome1, pib1, nome2, pib2);
             break;
 
             case 'E':
         case 'e':
             printf("Você escolheu a opção Densidade Populacional!\n");
             resultado1 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0 ;
+            printf("\nDensidade Populacional:\n - %s: %.2f hab/km² - densidade populacional\n - %s: %.2f hab/km² - densidade populacional\n", nome1, densidadePopulacional1, nome2, densidadePopulacional2);
             break;
 
             case 'F':
         case 'f':
             printf("Você escolheu a opção PIB per Capita!\n");
             resultado1 = pibperCapita1 > pibperCapita2 ? 1 : 0 ;
+             printf("\nPIB per Capita:\n - %s: %.2f reais - PIB per capita\n - %s: %.2f reais - PIB per capita\n", nome1, pibperCapita1, nome2, pibperCapita2);
             break;
 
             case 'G':
         case 'g':
             printf("Você escolheu a opção Super Poder!\n");
             resultado1 = superPoder1 > superPoder2 ? 1 : 0 ;
+            printf("\nSuper Poder:\n - %s: %.2f - super poder\n - %s: %.2f - super poder\n", nome1, superPoder1, nome2, superPoder2);
             break;
 
         default:
@@ -310,17 +317,18 @@ int main() {
 
     int resultado2;
     int segundoAtributo;
-    printf("\nMenu de Comparação de múltiplos atributos! \n");
+    printf("\nMenu de Comparação de múltiplos atributos \n");
     printf("Escolha o segundo atributo:\n");
-    printf("A. População\n");
-    printf("B. Pontos Turísticos\n");
-    printf("C. Área\n");
-    printf("D. PIB\n");
-    printf("E. Densidade Populacional\n");
-    printf("F. PIB per Capita\n");
-    printf("G. Super Poder");
+    printf("A - População\n");
+    printf("B - Pontos Turísticos\n");
+    printf("C - Área\n");
+    printf("D - PIB\n");
+    printf("E - Densidade Populacional\n");
+    printf("F - PIB per Capita\n");
+    printf("G - Super Poder");
 
-    printf("Escolha a comparação: ");
+    printf("\nEscolha a comparação: \n ");
+    printf("Atenção! Escolha um atributo diferente do primeiro.");
     scanf(" %c", &segundoAtributo);
 
     if(primeiroAtributo == segundoAtributo)
@@ -376,12 +384,24 @@ int main() {
 
     if(resultado1 && resultado2) // 1 e 1 = venceu.
     {
-        printf("Parabéns! Você venceu!\n");
+        printf("\n Parabéns! Você venceu!\n");
 
     } else if(resultado1 != resultado2){      //1 e 0/ 0 e 1 = empatou.
         printf("Empatou!\n");
     } else {                                  //0 e 0 = perdeu.
         printf("Infelizmente, você perdeu!\n");
     }
+}
+
+printf("A soma de todos atributos: \n");
+float final1 = superPoder1 + superPoder1;
+float final2 = superPoder2 + superPoder2;
+
+if (final1 > final2){
+  printf ("A carta 1 é a grande vencedora!");
+} else {
+    printf ("A carta 2 é a grande vencedora!");
+}
+
 return 0; //O programa terminou com sucesso.
 }
