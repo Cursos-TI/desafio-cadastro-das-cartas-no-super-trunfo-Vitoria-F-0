@@ -17,6 +17,7 @@ int main() {
     float densidadePopulacional1, densidadePopulacional2, pibperCapita1, pibperCapita2; //Armazena a densidade populacional (hab/km²) e o PIB per capita (reais).
     float superPoder1, superPoder2; //Armazena a soma do número populacional, área, PIB, pontos turísticos, inverso da densidade populacional e PIB per Capita.
     int resultado;// Armazena o valor de qual variável for maior.
+    float somaAtributos1, somaAtributos2;
   
     //Cadastro e armazenamento da Carta 1
 
@@ -51,6 +52,9 @@ int main() {
 
     superPoder1 = (float)populacao1 + area1 + pib1 + (float)pontosTuristicos1 + pibperCapita1 + (1.0 / densidadePopulacional1); //Soma as variáveis, alternado int para que todas estejam em float e invertendo o valor da densidadePopulacional.
     printf("Super Poder da carta 1: %f \n", superPoder1); //Imprime a soma das variáveis número populacional, área, PIB, pontos turísticos, inverso da densidade populacional e PIB per Capita.
+
+    somaAtributos1 = superPoder1; //O Super Poder já representa a soma de todos os atributos.
+    somaAtributos2 = superPoder2;
 
     //Imprimir os dados da carta 1
 
@@ -164,7 +168,7 @@ int main() {
 
     switch (opcaoMenu) {
         case 1:
-            printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - populção\n", nome1, populacao1, nome2, populacao2);
+            printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - população\n", nome1, populacao1, nome2, populacao2);
             if (populacao1 > populacao2){
                 printf("Resultado: Carta 1 venceu!\n", nome1);
             }else if (populacao2 > populacao1){
@@ -266,49 +270,49 @@ int main() {
         case 'a':
             printf("Você escolheu a opção População!\n");
             resultado1 = populacao1 > populacao2 ? 1 : 0 ;
-            printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - populção\n", nome1, populacao1, nome2, populacao2);
+            printf("\nPopulação:\n - %s: %lu - população\n", nome1, populacao1);
             break;
 
             case 'B':
         case 'b':
             printf("Você escolheu a opção Pontos Turísticos!\n");
             resultado1 = pontosTuristicos1 > pontosTuristicos2 ? 1 : 0 ;
-            printf("\nPontos Turísticos:\n - %s: %d - pontos turísticos\n - %s: %d - pontos turísticos\n", nome1, pontosTuristicos1, nome2, pontosTuristicos2);
+            printf("\nPontos Turísticos:\n - %s: %d - pontos turísticos\n", nome1, pontosTuristicos1);
             break;
 
             case 'C':
         case 'c':
             printf("Você escolheu a opção Área!\n");
             resultado1 = area1 > area2 ? 1 : 0 ;
-            printf("\nÁrea:\n - %s: %.2f km² - área\n - %s: %.2f km² - área\n", nome1, area1, nome2, area2);
+            printf("\nÁrea:\n - %s: %.2f km² - área\n", nome1, area1);
             break;
 
             case 'D':
         case 'd':
             printf("Você escolheu a opção PIB!\n");
             resultado1 = pib1 > pib2 ? 1 : 0 ;
-            printf("\nPIB:\n - %s: %.2f bilhões - PIB\n - %s: %.2f bilhões - PIB\n", nome1, pib1, nome2, pib2);
+            printf("\nPIB:\n - %s: %.2f bilhões - PIB\n", nome1, pib1);
             break;
 
             case 'E':
         case 'e':
             printf("Você escolheu a opção Densidade Populacional!\n");
             resultado1 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0 ;
-            printf("\nDensidade Populacional:\n - %s: %.2f hab/km² - densidade populacional\n - %s: %.2f hab/km² - densidade populacional\n", nome1, densidadePopulacional1, nome2, densidadePopulacional2);
+            printf("\nDensidade Populacional:\n - %s: %.2f hab/km² - densidade populacional\n", nome1, densidadePopulacional1);
             break;
 
             case 'F':
         case 'f':
             printf("Você escolheu a opção PIB per Capita!\n");
             resultado1 = pibperCapita1 > pibperCapita2 ? 1 : 0 ;
-             printf("\nPIB per Capita:\n - %s: %.2f reais - PIB per capita\n - %s: %.2f reais - PIB per capita\n", nome1, pibperCapita1, nome2, pibperCapita2);
+             printf("\nPIB per Capita:\n - %s: %.2f reais - PIB per capita\n", nome1, pibperCapita1);
             break;
 
             case 'G':
         case 'g':
             printf("Você escolheu a opção Super Poder!\n");
             resultado1 = superPoder1 > superPoder2 ? 1 : 0 ;
-            printf("\nSuper Poder:\n - %s: %.2f - super poder\n - %s: %.2f - super poder\n", nome1, superPoder1, nome2, superPoder2);
+            printf("\nSuper Poder:\n - %s: %.2f - super poder\n", nome1, superPoder1);
             break;
 
         default:
@@ -325,7 +329,7 @@ int main() {
     printf("D - PIB\n");
     printf("E - Densidade Populacional\n");
     printf("F - PIB per Capita\n");
-    printf("G - Super Poder");
+    printf("G - Super Poder\n");
 
     printf("\nEscolha a comparação: ");
     printf("\nAtenção! Escolha um atributo diferente do primeiro.\n");
@@ -340,42 +344,49 @@ int main() {
         case 'a':
             printf("Você escolheu a opção População!\n");
             resultado2 = populacao1 > populacao2 ? 1 : 0 ;
+            printf("\nPopulação:\n - %s: %lu - população\n", nome2, populacao2);
             break;
 
             case 'B':
         case 'b':
             printf("Você escolheu a opção Pontos Turísticos!\n");
             resultado2 = pontosTuristicos1 > pontosTuristicos2 ? 1 : 0 ;
+            printf("\nPontos Turísticos:\n - %s: %d - pontos turísticos\n", nome2, pontosTuristicos2);
             break;
 
             case 'C':
         case 'c':
             printf("Você escolheu a opção Área!\n");
             resultado2 = area1 > area2 ? 1 : 0 ;
+            printf("\nÁrea:\n - %s: %.2f km² - área\n", nome2, area2);
             break;
 
             case 'D':
         case 'd':
             printf("Você escolheu a opção PIB!\n");
             resultado2 = pib1 > pib2 ? 1 : 0 ;
+            printf("\nPIB:\n - %s: %.2f bilhões - PIB\n", nome2, pib2);
             break;
 
             case 'E':
         case 'e':
             printf("Você escolheu a opção Densidade Populacional!\n");
             resultado2 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0 ;
+            printf("\nDensidade Populacional:\n - %s: %.2f hab/km² - densidade populacional\n", nome2, densidadePopulacional2);
             break;
 
             case 'F':
         case 'f':
             printf("Você escolheu a opção PIB per Capita!\n");
             resultado2 = pibperCapita1 > pibperCapita2 ? 1 : 0 ;
+            printf("\nPIB per Capita:\n - %s: %.2f reais - PIB per capita\n", nome2, pibperCapita2);
             break;
 
             case 'G':
         case 'g':
             printf("Você escolheu a opção Super Poder!\n");
             resultado2 = superPoder1 > superPoder2 ? 1 : 0 ;
+            printf("\nSuper Poder:\n - %s: %.2f - super poder\n", nome2, superPoder2);
             break;
 
         default:
@@ -393,14 +404,15 @@ int main() {
     }
 }
 
-printf("A soma de todos atributos: \n");
-float final1 = superPoder1 + superPoder1;
-float final2 = superPoder2 + superPoder2;
+printf("\nA soma de todos atributos: \n");
 
-if (final1 > final2){
-  printf ("A carta 1 é a grande vencedora!");
+if (somaAtributos1 > somaAtributos2){
+  printf ("\nA carta 1 é a grande vencedora com a soma total de %.2f - %s!", somaAtributos1, nome1);
+} else if (somaAtributos1 < somaAtributos2) {
+    printf ("\nA carta 2 é a grande vencedora com a soma total de %.2f - %s!", somaAtributos2, nome2);
 } else {
-    printf ("A carta 2 é a grande vencedora!");
+    printf("Empatou! Ambas somaram %.2f.", somaAtributos1);
+
 }
 
 return 0; //O programa terminou com sucesso.
