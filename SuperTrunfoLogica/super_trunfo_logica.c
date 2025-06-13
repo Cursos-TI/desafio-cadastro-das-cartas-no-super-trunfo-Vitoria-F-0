@@ -17,7 +17,8 @@ int main() {
     float densidadePopulacional1, densidadePopulacional2, pibperCapita1, pibperCapita2; //Armazena a densidade populacional (hab/km²) e o PIB per capita (reais).
     float superPoder1, superPoder2; //Armazena a soma do número populacional, área, PIB, pontos turísticos, inverso da densidade populacional e PIB per Capita.
     int resultado;// Armazena o valor de qual variável for maior.
-    float somaAtributos1, somaAtributos2;
+    float somaAtributos1, somaAtributos2;//Armazena a soma das variáveis selecionadas pelo usuário para comparação
+    float valor1atributo1 , valor1atributo2 , valor2atributo1 , valor2atributo2 ; //Armazena todas variáveis selecionadas pelo usuário
   
     //Cadastro e armazenamento da Carta 1
 
@@ -52,9 +53,6 @@ int main() {
 
     superPoder1 = (float)populacao1 + area1 + pib1 + (float)pontosTuristicos1 + pibperCapita1 + (1.0 / densidadePopulacional1); //Soma as variáveis, alternado int para que todas estejam em float e invertendo o valor da densidadePopulacional.
     printf("Super Poder da carta 1: %f \n", superPoder1); //Imprime a soma das variáveis número populacional, área, PIB, pontos turísticos, inverso da densidade populacional e PIB per Capita.
-
-    somaAtributos1 = superPoder1; //O Super Poder já representa a soma de todos os atributos.
-    somaAtributos2 = superPoder2;
 
     //Imprimir os dados da carta 1
 
@@ -97,6 +95,9 @@ int main() {
 
     superPoder2 = (float)populacao2 + area2 + pib2 + (float)pontosTuristicos2 + pibperCapita2 + (1.0 / densidadePopulacional2);
     printf("Super Poder da carta 2: %f \n", superPoder2);
+
+    somaAtributos1 = superPoder1; //O Super Poder já representa a soma de todos os atributos.
+    somaAtributos2 = superPoder2;
 
     //Imprimir os dados da carta 2
    
@@ -170,9 +171,9 @@ int main() {
         case 1:
             printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - população\n", nome1, populacao1, nome2, populacao2);
             if (populacao1 > populacao2){
-                printf("Resultado: Carta 1 venceu!\n", nome1);
+                printf("Resultado: Carta 1 venceu!\n");
             }else if (populacao2 > populacao1){
-                printf("Resultado: Carta 2 venceu!\n", nome2);
+                printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -181,9 +182,9 @@ int main() {
         case 2:
             printf("\nÁrea:\n - %s: %.2f km² - área\n - %s: %.2f km² - área\n", nome1, area1, nome2, area2);
             if (area1 > area2){
-                printf("Resultado: Carta 1 venceu!\n", nome1);
+                printf("Resultado: Carta 1 venceu!\n");
             }else if (area2 > area1){
-                printf("Resultado: Carta 2 venceu!\n", nome2);
+                printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -192,9 +193,9 @@ int main() {
         case 3:
             printf("\nPIB:\n - %s: %.2f bilhões - PIB\n - %s: %.2f bilhões - PIB\n", nome1, pib1, nome2, pib2);
             if (pib1 > pib2){
-                printf("Resultado: Carta 1 venceu!\n", nome1);
+                printf("Resultado: Carta 1 venceu!\n");
             }else if (pib2 > pib1){
-                printf("Resultado: Carta 2 venceu!\n", nome2);
+                printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -203,9 +204,9 @@ int main() {
         case 4:
             printf("\nPontos Turísticos:\n - %s: %d - pontos turísticos\n - %s: %d - pontos turísticos\n", nome1, pontosTuristicos1, nome2, pontosTuristicos2);
             if (pontosTuristicos1 > pontosTuristicos2){
-                printf("Resultado: Carta 1 venceu!\n", nome1);
+                printf("Resultado: Carta 1 venceu!\n");
             }else if (pontosTuristicos2 > pontosTuristicos1){
-                printf("Resultado: Carta 2 venceu!\n", nome2);
+                printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -214,9 +215,9 @@ int main() {
         case 5:
             printf("\nDensidade Populacional:\n - %s: %.2f hab/km² - densidade populacional\n - %s: %.2f hab/km² - densidade populacional\n", nome1, densidadePopulacional1, nome2, densidadePopulacional2);
             if (densidadePopulacional1 < densidadePopulacional2){
-                printf("Resultado: Carta 1 venceu!\n", nome1);
+                printf("Resultado: Carta 1 venceu!\n");
             }else if (densidadePopulacional2 < densidadePopulacional1){
-                printf("Resultado: Carta 2 venceu!\n", nome2);
+                printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -225,9 +226,9 @@ int main() {
         case 6:
             printf("\nPIB per Capita:\n - %s: %.2f reais - PIB per capita\n - %s: %.2f reais - PIB per capita\n", nome1, pibperCapita1, nome2, pibperCapita2);
             if (pibperCapita1 > pibperCapita2){
-                printf("Resultado: Carta 1 venceu!\n", nome1);
+                printf("Resultado: Carta 1 venceu!\n");
             }else if (pibperCapita2 > pibperCapita1){
-                printf("Resultado: Carta 2 venceu!\n", nome2);
+                printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -236,9 +237,9 @@ int main() {
         case 7:
             printf("\nSuper Poder:\n - %s: %.2f - super poder\n - %s: %.2f - super poder\n", nome1, superPoder1, nome2, superPoder2);
             if (superPoder1 > superPoder2){
-                printf("Resultado: Carta 1 venceu!\n", nome1);
+                printf("Resultado: Carta 1 venceu!\n");
             }else if (superPoder2 > superPoder1){
-                printf("Resultado: Carta 2 venceu!\n", nome2);
+                printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
@@ -318,6 +319,18 @@ int main() {
         default:
             printf("Opção inválida! Tente novamente.\n");
     }
+
+    //Switch para confirmar o valor correto para cada uma das suas variáveis
+
+    switch (primeiroAtributo) {
+    case 'A': case 'a': valor1atributo1 = populacao1; valor2atributo1 = populacao2; break;
+    case 'B': case 'b': valor1atributo1 = pontosTuristicos1; valor2atributo1 = pontosTuristicos2; break;
+    case 'C': case 'c': valor1atributo1 = area1; valor2atributo1 = area2; break;
+    case 'D': case 'd': valor1atributo1 = pib1; valor2atributo1 = pib2; break;
+    case 'E': case 'e': valor1atributo1 = densidadePopulacional1; valor2atributo1 = densidadePopulacional2; break;
+    case 'F': case 'f': valor1atributo1 = pibperCapita1; valor2atributo1 = pibperCapita2; break;
+    case 'G': case 'g': valor1atributo1 = superPoder1; valor2atributo1 = superPoder2; break;
+}
 
     int resultado2;
     int segundoAtributo;
@@ -404,12 +417,27 @@ int main() {
     }
 }
 
-printf("\nA soma de todos atributos: \n");
+switch (segundoAtributo) {
+    case 'A': case 'a': valor1atributo2 = populacao1; valor2atributo2 = populacao2; break;
+    case 'B': case 'b': valor1atributo2 = pontosTuristicos1; valor2atributo2 = pontosTuristicos2; break;
+    case 'C': case 'c': valor1atributo2 = area1; valor2atributo2 = area2; break;
+    case 'D': case 'd': valor1atributo2 = pib1; valor2atributo2 = pib2; break;
+    case 'E': case 'e': valor1atributo2 = densidadePopulacional1; valor2atributo2 = densidadePopulacional2; break;
+    case 'F': case 'f': valor1atributo2 = pibperCapita1; valor2atributo2 = pibperCapita2; break;
+    case 'G': case 'g': valor1atributo2 = superPoder1; valor2atributo2 = superPoder2; break;
+}
+
+//Por fim, a soma das duas variáveis por carta
+
+printf("\nA soma dos atributos selecionados: \n");
+
+somaAtributos1 = valor1atributo1 + valor1atributo2;
+somaAtributos2 = valor2atributo1 + valor2atributo2;
 
 if (somaAtributos1 > somaAtributos2){
-  printf ("\nA carta 1 é a grande vencedora com a soma total de %.2f - %s!", somaAtributos1, nome1);
+  printf ("\nA carta 1 é a vencedora com a soma total de %.2f - %s!", somaAtributos1, nome1);
 } else if (somaAtributos1 < somaAtributos2) {
-    printf ("\nA carta 2 é a grande vencedora com a soma total de %.2f - %s!", somaAtributos2, nome2);
+    printf ("\nA carta 2 é a vencedora com a soma total de %.2f - %s!", somaAtributos2, nome2);
 } else {
     printf("Empatou! Ambas somaram %.2f.", somaAtributos1);
 
