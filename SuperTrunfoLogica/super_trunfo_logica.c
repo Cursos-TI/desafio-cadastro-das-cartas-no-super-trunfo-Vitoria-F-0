@@ -96,9 +96,6 @@ int main() {
     superPoder2 = (float)populacao2 + area2 + pib2 + (float)pontosTuristicos2 + pibperCapita2 + (1.0 / densidadePopulacional2);
     printf("Super Poder da carta 2: %f \n", superPoder2);
 
-    somaAtributos1 = superPoder1; //O Super Poder já representa a soma de todos os atributos.
-    somaAtributos2 = superPoder2;
-
     //Imprimir os dados da carta 2
    
     printf("\nCarta 2: \n");
@@ -154,10 +151,10 @@ int main() {
 
     //Menu para seleção de comparação entre atributos
 
-     int opcaoMenu;
+     int opcaoMenu; //controle para o switch
     printf("\nMenu De Comparação \n");
     printf("Escolha o atributo para comparar:\n");
-    printf("1 - População\n");
+    printf("1 - População\n"); //Variáveis para o usuário selecionar pelo número
     printf("2 - Área\n");
     printf("3 - PIB\n");
     printf("4 - Pontos Turísticos\n");
@@ -165,19 +162,19 @@ int main() {
     printf("6 - PIB per Capita\n");
     printf("7 - Super Poder\n");
     printf("Digite a opção desejada: ");
-    scanf("%d", &opcaoMenu);
+    scanf("%d", &opcaoMenu); //Armazena a opção selecionada
 
-    switch (opcaoMenu) {
+    switch (opcaoMenu) { //O código da case será executado quando um valor da variável for selecionado pelo usuário.
         case 1:
-            printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - população\n", nome1, populacao1, nome2, populacao2);
-            if (populacao1 > populacao2){
+            printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - população\n", nome1, populacao1, nome2, populacao2); //Imprime a variável, seu valor e a cidade associada.
+            if (populacao1 > populacao2){ 
                 printf("Resultado: Carta 1 venceu!\n");
             }else if (populacao2 > populacao1){
                 printf("Resultado: Carta 2 venceu!\n");
             }else{
                 printf("Houve um empate!\n");
             }    
-            break;
+            break; //Para com a execução da case e das próximas.
 
         case 2:
             printf("\nÁrea:\n - %s: %.2f km² - área\n - %s: %.2f km² - área\n", nome1, area1, nome2, area2);
@@ -246,7 +243,7 @@ int main() {
             break;
 
         default:
-            printf("Opção inválida! Tente novamente.\n");
+            printf("Opção inválida! Tente novamente.\n"); //No caso da escolha não estiver entre todas opções
     }
 
     //Menu de comparação entre múltiplos atributos
@@ -320,7 +317,7 @@ int main() {
             printf("Opção inválida! Tente novamente.\n");
     }
 
-    //Switch para confirmar o valor correto para cada uma das suas variáveis
+ //Switch para confirmar o valor da variável que for selecionada
 
     switch (primeiroAtributo) {
     case 'A': case 'a': valor1atributo1 = populacao1; valor2atributo1 = populacao2; break;
@@ -406,6 +403,16 @@ int main() {
             printf("Opção inválida! Tente novamente.\n");
     }
 
+    switch (segundoAtributo) {
+    case 'A': case 'a': valor1atributo2 = populacao1; valor2atributo2 = populacao2; break;
+    case 'B': case 'b': valor1atributo2 = pontosTuristicos1; valor2atributo2 = pontosTuristicos2; break;
+    case 'C': case 'c': valor1atributo2 = area1; valor2atributo2 = area2; break;
+    case 'D': case 'd': valor1atributo2 = pib1; valor2atributo2 = pib2; break;
+    case 'E': case 'e': valor1atributo2 = densidadePopulacional1; valor2atributo2 = densidadePopulacional2; break;
+    case 'F': case 'f': valor1atributo2 = pibperCapita1; valor2atributo2 = pibperCapita2; break;
+    case 'G': case 'g': valor1atributo2 = superPoder1; valor2atributo2 = superPoder2; break;
+}
+
     if(resultado1 && resultado2) // 1 e 1 = venceu.
     {
         printf("\n Parabéns! Você venceu!\n");
@@ -415,16 +422,6 @@ int main() {
     } else {                                  //0 e 0 = perdeu.
         printf("Infelizmente, você perdeu!\n");
     }
-}
-
-switch (segundoAtributo) {
-    case 'A': case 'a': valor1atributo2 = populacao1; valor2atributo2 = populacao2; break;
-    case 'B': case 'b': valor1atributo2 = pontosTuristicos1; valor2atributo2 = pontosTuristicos2; break;
-    case 'C': case 'c': valor1atributo2 = area1; valor2atributo2 = area2; break;
-    case 'D': case 'd': valor1atributo2 = pib1; valor2atributo2 = pib2; break;
-    case 'E': case 'e': valor1atributo2 = densidadePopulacional1; valor2atributo2 = densidadePopulacional2; break;
-    case 'F': case 'f': valor1atributo2 = pibperCapita1; valor2atributo2 = pibperCapita2; break;
-    case 'G': case 'g': valor1atributo2 = superPoder1; valor2atributo2 = superPoder2; break;
 }
 
 //Por fim, a soma das duas variáveis por carta
