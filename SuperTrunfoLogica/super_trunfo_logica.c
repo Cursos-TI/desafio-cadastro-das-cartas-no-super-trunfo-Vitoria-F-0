@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 //Super Trunfo em C: desenvolvendo a lógica do jogo - Nível: Iniciante/ Aventureiro/ Mestre
-//Primeira etapa: adicionar comparação entre os atributos com if-else/ implementar um menu interativo com switch e estruturas de decisão aninhada/
-//O objetivo é melhorar o desafio Super Trunfo Cartas adicionando complexidade com estruturas de decisão, switch e...
+//Primeira etapa: adicionar comparação entre os atributos com if-else/ Segunda etapa: implementar um menu interativo com switch e estruturas de decisão aninhada/ Terceira etapa: adição da lógica de comparação entre múltiplas váriaveis e do operador ternário
+//O objetivo é melhorar o desafio Super Trunfo Cartas adicionando complexidade com estruturas de decisão , switch, operadores ternários e operadores lógicos
 
 int main() {
 
@@ -134,16 +134,16 @@ int main() {
 
     printf("\nComparação de Atributos \n");
 
-    printf("Carta 1 - %s: %d Pontos Turísticos \n", nome1, pontosTuristicos1); // Irá imprimir o resultado completo após completar a comparação.
+    printf("Carta 1 - %s: %d Pontos Turísticos \n", nome1, pontosTuristicos1); //Irá imprimir o resultado completo após completar a comparação.
     printf("Carta 2 - %s: %d  Pontos Turísticos  \n", nome2, pontosTuristicos2);
 
-    if (pontosTuristicos1 > pontosTuristicos2) { //define o tipo de comparação feita.
-        //se condição for verdadeira.
+    if (pontosTuristicos1 > pontosTuristicos2) { //Define o tipo de comparação feita.
+        //Se condição for verdadeira.
 
         printf("Resultado: Carta 1 venceu! \n ");
 
     } else {
-        //se condição for falsa.
+        //Se condição for falsa.
 
         printf("Resultado: Carta 2 venceu! \n ");
 
@@ -151,28 +151,28 @@ int main() {
 
     //Menu para seleção de comparação entre atributos
 
-     int opcaoMenu; //controle para o switch
-    printf("\nMenu De Comparação \n");
+     int opcaoMenu; //Controle para o switch.
+    printf("\nMenu De Comparação \n"); //Apresenta o menu.
     printf("Escolha o atributo para comparar:\n");
-    printf("1 - População\n"); //Variáveis para o usuário selecionar pelo número
+    printf("1 - População\n"); //Variáveis para o usuário selecionar pelo número.
     printf("2 - Área\n");
     printf("3 - PIB\n");
     printf("4 - Pontos Turísticos\n");
     printf("5 - Densidade Populacional (menor vence)\n");
     printf("6 - PIB per Capita\n");
     printf("7 - Super Poder\n");
-    printf("Digite a opção desejada: ");
-    scanf("%d", &opcaoMenu); //Armazena a opção selecionada
+    printf("Digite a opção desejada: "); //Solicita ao usuário que selecione uma das opções disponíveis.
+    scanf("%d", &opcaoMenu); //Armazena a opção selecionada.
 
     switch (opcaoMenu) { //O código da case será executado quando um valor da variável for selecionado pelo usuário.
         case 1:
             printf("\nPopulação:\n - %s: %lu - população\n - %s: %lu - população\n", nome1, populacao1, nome2, populacao2); //Imprime a variável, seu valor e a cidade associada.
-            if (populacao1 > populacao2){ 
-                printf("Resultado: Carta 1 venceu!\n");
-            }else if (populacao2 > populacao1){
-                printf("Resultado: Carta 2 venceu!\n");
-            }else{
-                printf("Houve um empate!\n");
+            if (populacao1 > populacao2){ //Se a variável 1 é maior que a variável 2.
+                printf("Resultado: Carta 1 venceu!\n"); //Esse resultado será imprimido.
+            }else if (populacao2 > populacao1){ //Se o contrário for verdade.
+                printf("Resultado: Carta 2 venceu!\n"); //Esse resultado será imprimido.
+            }else{ //No último caso, se os resultados forem iguais.
+                printf("Houve um empate!\n"); //Esse resultado será imprimido.
             }    
             break; //Para com a execução da case e das próximas.
 
@@ -243,14 +243,14 @@ int main() {
             break;
 
         default:
-            printf("Opção inválida! Tente novamente.\n"); //No caso da escolha não estiver entre todas opções
+            printf("Opção inválida! Tente novamente.\n"); //No caso da escolha não estiver entre todas opções.
     }
 
     //Menu de comparação entre múltiplos atributos
 
-    int resultado1;
-    int primeiroAtributo;
-    printf("\nMenu de Comparação de múltiplos atributos \n");
+    int resultado1; //Variável para armazenar o resultado da primeira comparação.
+    int primeiroAtributo; //Variável para armazenar a primeira escolha do usuário.
+    printf("\nMenu de Comparação de múltiplos atributos \n"); //Exibe o menu de comparação com os atributos disponíveis.
     printf("Escolha o primeiro atributo:\n");
     printf("A - População\n");
     printf("B - Pontos Turísticos\n");
@@ -260,16 +260,16 @@ int main() {
     printf("F - PIB per Capita\n");
     printf("G - Super Poder\n");
 
-    printf("Escolha a comparação: ");
-    scanf(" %c", &primeiroAtributo);
+    printf("Escolha a comparação: "); //Solicita que o usuário escolha uma das opções.
+    scanf(" %c", &primeiroAtributo); //Armazena a escolha do usuário.
 
-    switch (primeiroAtributo) {
-        case 'A':
-        case 'a':
+    switch (primeiroAtributo) { //Verifica qual opção o usuário escolheu usando Switch Case.
+        case 'A': //Caso o usuário digite 'A'.
+        case 'a': //Caso digite 'a'.
             printf("Você escolheu a opção População!\n");
-            resultado1 = populacao1 > populacao2 ? 1 : 0 ;
-            printf("\nPopulação:\n - %s: %lu - população\n", nome1, populacao1);
-            break;
+            resultado1 = populacao1 > populacao2 ? 1 : 0 ; //Compara as populações: se populacao1 for maior que populacao2, resultado1 recebe 1, senão, recebe 0.
+            printf("\nPopulação:\n - %s: %lu - população\n", nome1, populacao1); //Imprime o atributo selecionado, cidade relacionada, e seu valor.
+            break; //Quebra a leitura da case e das próximas se for selecionado.
 
             case 'B':
         case 'b':
@@ -314,13 +314,13 @@ int main() {
             break;
 
         default:
-            printf("Opção inválida! Tente novamente.\n");
+            printf("Opção inválida! Tente novamente.\n"); //No caso do usuário escolher um atributos que não está nas opções.
     }
 
  //Switch para confirmar o valor da variável que for selecionada
 
-    switch (primeiroAtributo) {
-    case 'A': case 'a': valor1atributo1 = populacao1; valor2atributo1 = populacao2; break;
+    switch (primeiroAtributo) { //Verifica qual atributo o usuário escolheu.
+    case 'A': case 'a': valor1atributo1 = populacao1; valor2atributo1 = populacao2; break; //valor1atributo1: valor do primeiro país. valor2atributo1: valor do segundo país.
     case 'B': case 'b': valor1atributo1 = pontosTuristicos1; valor2atributo1 = pontosTuristicos2; break;
     case 'C': case 'c': valor1atributo1 = area1; valor2atributo1 = area2; break;
     case 'D': case 'd': valor1atributo1 = pib1; valor2atributo1 = pib2; break;
@@ -345,7 +345,7 @@ int main() {
     printf("\nAtenção! Escolha um atributo diferente do primeiro.\n");
     scanf(" %c", &segundoAtributo);
 
-    if(primeiroAtributo == segundoAtributo)
+    if(primeiroAtributo == segundoAtributo) //Verifica se o usuário escolheu o mesmo atributo duas vezes.
     {
         printf("Você escolheu o mesmo atributo!");
     } else {
@@ -413,29 +413,31 @@ int main() {
     case 'G': case 'g': valor1atributo2 = superPoder1; valor2atributo2 = superPoder2; break;
 }
 
-    if(resultado1 && resultado2) // 1 e 1 = venceu.
+// Verifica o resultado da comparação
+
+    if(resultado1 && resultado2) //Se ambos forem 1 = venceu.
     {
         printf("\n Parabéns! Você venceu!\n");
 
-    } else if(resultado1 != resultado2){      //1 e 0/ 0 e 1 = empatou.
+    } else if(resultado1 != resultado2){      //Se um for 1 e o outro 0 = empatou.
         printf("Empatou!\n");
-    } else {                                  //0 e 0 = perdeu.
+    } else {                                  //Se ambos forem 0 = perdeu.
         printf("Infelizmente, você perdeu!\n");
     }
 }
 
-//Por fim, a soma das duas variáveis por carta
+//Por fim, a soma dos atributos escolhidos por carta
 
-printf("\nA soma dos atributos selecionados: \n");
+printf("\nResultado final da rodada com base na soma dos atributos selecionados: \n");
 
-somaAtributos1 = valor1atributo1 + valor1atributo2;
+somaAtributos1 = valor1atributo1 + valor1atributo2; //Soma dos dois atributos (carta 1).
 somaAtributos2 = valor2atributo1 + valor2atributo2;
 
-if (somaAtributos1 > somaAtributos2){
-  printf ("\nA carta 1 é a vencedora com a soma total de %.2f - %s!", somaAtributos1, nome1);
-} else if (somaAtributos1 < somaAtributos2) {
+if (somaAtributos1 > somaAtributos2){ //Se somaAtributos1 for maior, a carta 1 venceu.
+  printf ("\nA carta 1 é a vencedora com a soma total de %.2f - %s!", somaAtributos1, nome1); //Imprime a soma total com valor e o nome do local.
+} else if (somaAtributos1 < somaAtributos2) { //Se somaAtributos2 for maior, a carta 2 venceu.
     printf ("\nA carta 2 é a vencedora com a soma total de %.2f - %s!", somaAtributos2, nome2);
-} else {
+} else { //Se o valor for igual, é empate.
     printf("Empatou! Ambas somaram %.2f.", somaAtributos1);
 
 }
