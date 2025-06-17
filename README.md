@@ -92,3 +92,95 @@ Ao concluir qualquer um dos níveis, você terá dado um passo importante no des
 
 Equipe de Ensino - MateCheck
 content_copy
+
+## 🃏 Super Trunfo - Países (Nível Mestre)
+
+Bem-vindo ao desafio Super Trunfo - Países
+
+O objetivo deste jogo é permitir que o jogador crie cartas baseadas em cidades de diferentes regiões do Brasil e possa compará-las entre si.
+
+Este código foi desenvolvido com base nos requisitos do Nível Mestre do desafio proposto pela MateCheck.
+
+## ⚙️ Compilação
+
+Para compilar e executar o programa localmente, siga os passos abaixo:
+
+Requisitos: compilador C (como GCC) ou compatível.
+
+Você pode usar ambientes com suporte ao terminal como Visual Studio Code.
+
+1. Certifique-se de ter o compilador `gcc` instalado
+2. Baixe o arquivo `super_trunfo_logica.c` deste repositório
+3. Abra o Visual Studio Code
+4. Vá em File, selecione Open Folder
+5. Selecione a pasta que contém seu arquivo super_trunfo_logica.c
+6. No menu superior, procure Terminal, selecione New Terminal ou pressione Ctrl + crase
+7. O terminal vai abrir já dentro da pasta atual.
+8. Compile o programa com:
+   gcc super_trunfo_logica.c -o super_trunfo_logica (Linux)
+9. Execute com:
+   ./super_trunfo_logica (Linux)
+
+## ▶️ Execução
+
+Após a compilação, o jogador será guiado para o cadastro dos atributos das duas cartas.
+Com a apresentação da carta completa, o jogador poderá comparar atributos nos menus interativos.
+Primeiro um único atributo e no segundo não é permitido repetir atributos.
+Por fim, a soma total dos atributos escolhidos definirá a carta vencedora da rodada.
+
+## 🧾 Detalhes das Cartas
+
+Cada carta representa uma cidade brasileiro e é composto por:
+
+Estado - representado por A até H.
+Código - representado por A01 - A04 até H01 - H04.
+Nome - representa o nome da cidade associada ao estado (não é possível colocar nomes compostos) com limite de 19 caracteres.
+
+Código	    Atributo	            Tipo	                                    Vence quem tiver...
+A(1)	    População	            unsigned long int	                        Maior valor
+B(2)	    Pontos Turísticos	    int	                                        Maior valor
+C(3)	    Área (km²)	            float	                                    Maior valor
+D(4)	    PIB (R$ bilhões)	    float	                                    Maior valor
+E(5)	    Densidade Populacional	float (populacao / area)	                Menor valor
+F(6)	    PIB per Capita	        float (pib * 1000000000) / populacao	    Maior valor
+G(7)	    Super Poder	            float (soma de todas variáveis)	            Maior valor
+
+## 📄 Exemplo da criação da carta
+
+Carta 1: 
+Digite a letra que represente o estado(A até H): 
+A
+Digite o código da carta(A01 - A04 até H01 - H04): 
+A01
+Digite o nome da cidade(somente um nome): 
+Campinas
+Digite o número populacional: 
+123456
+Digite o tamanho da área em quilômetros quadrados: 
+2.222
+Digite o PIB da cidade: 
+12.12
+Digite o número de pontos turísticos da cidade: 
+45
+
+## 📋 Exemplo do uso do menu
+
+Menu de Comparação de múltiplos atributos 
+Escolha o primeiro atributo:
+A - População
+B - Pontos Turísticos
+C - Área
+D - PIB
+E - Densidade Populacional
+F - PIB per Capita
+G - Super Poder
+Escolha a comparação: C
+Você escolheu a opção Área!
+
+Área:
+ - Campinas: 2.22 km² - área
+
+## 🏁 Conclusão
+
+O Super Trunfo - Países está em conformidade com o os pedidos da MateCheck, implementando menus interativos, lógica condicional, comparação entre cartas e cálculos automáticos de atributos. Além disso, foi usada a base anteriormente desenvolvida para que a criação das cartas.
+Obrigado por jogar!
