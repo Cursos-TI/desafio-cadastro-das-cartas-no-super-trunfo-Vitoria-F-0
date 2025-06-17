@@ -117,9 +117,9 @@ Você pode usar ambientes com suporte ao terminal como Visual Studio Code.
 6. No menu superior, procure Terminal, selecione New Terminal ou pressione Ctrl + crase
 7. O terminal vai abrir já dentro da pasta atual.
 8. Compile o programa com:
-   gcc super_trunfo_logica.c -o super_trunfo_logica (Linux)
+   gcc super_trunfo_logica.c -o super_trunfo_logica
 9. Execute com:
-   ./super_trunfo_logica (Linux)
+   ./super_trunfo_logica
 
 ## ▶️ Execução
 
