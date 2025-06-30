@@ -109,12 +109,12 @@ Requisitos: compilador C (como GCC) ou compatível.
 
 Você pode usar ambientes com suporte ao terminal como Visual Studio Code.
 
-1. Certifique-se de ter o compilador `gcc` instalado
-2. Baixe o arquivo `super_trunfo_logica.c` deste repositório
-3. Abra o Visual Studio Code
-4. Vá em File, selecione Open Folder
-5. Selecione a pasta que contém seu arquivo super_trunfo_logica.c
-6. No menu superior, procure Terminal, selecione New Terminal ou pressione Ctrl + crase
+1. Certifique-se de ter o compilador `gcc` instalado.
+2. Baixe o arquivo `super_trunfo_logica.c` deste repositório.
+3. Abra o Visual Studio Code.
+4. Vá em File, selecione Open Folder.
+5. Selecione a pasta que contém seu arquivo super_trunfo_logica.c.
+6. No menu superior, procure Terminal, selecione New Terminal ou pressione Ctrl + crase.
 7. O terminal vai abrir já dentro da pasta atual.
 8. Compile o programa com:
    gcc super_trunfo_logica.c -o super_trunfo_logica
@@ -217,6 +217,6 @@ Você escolheu a opção Área!
 
 ## 🏁 Conclusão
 
-O Super Trunfo - Países está em conformidade com o os pedidos da MateCheck, implementando menus interativos, lógica condicional, comparação entre cartas e cálculos automáticos de atributos. Além disso, foi usada a base anteriormente desenvolvida para que a criação das cartas.
+O Super Trunfo - Países está em conformidade com o os pedidos da MateCheck, implementando menus interativos, estrutura condicional  comparação entre cartas. Além disso, foi usada a base anteriormente desenvolvida para que a criação das cartas.
 
 Obrigado por jogar!
