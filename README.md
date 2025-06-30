@@ -217,6 +217,6 @@ Você escolheu a opção Área!
 
 ## 🏁 Conclusão
 
-O Super Trunfo - Países está em conformidade com o os pedidos da MateCheck, implementando menus interativos, estrutura condicional  comparação entre cartas. Além disso, foi usada a base anteriormente desenvolvida para que a criação das cartas.
+O Super Trunfo - Países está em conformidade com o os pedidos da MateCheck, implementando menus interativos, estrutura condicional e  comparação entre cartas. Além disso, foi usada a base anteriormente desenvolvida para que a criação das cartas.
 
 Obrigado por jogar!
